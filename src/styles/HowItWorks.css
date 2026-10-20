@@ -1,0 +1,522 @@
+.hiw-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hiw-bg-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+}
+
+.hiw-bg-glow-left {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(230, 81, 0, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.hiw-bg-glow-right {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(27, 94, 32, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 8s ease-in-out infinite 2s;
+}
+
+.hiw-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hiw-header {
+    text-align: center;
+    margin-bottom: var(--space-xxxl);
+    position: relative;
+}
+
+.hiw-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(33, 150, 243, 0.1);
+    border-radius: var(--radius-full);
+}
+
+.hiw-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #2196F3;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.hiw-badge-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2196F3;
+    letter-spacing: 1px;
+}
+
+.hiw-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-lg);
+}
+
+.hiw-title-text {
+    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-orange) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hiw-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hiw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xxxl);
+    align-items: flex-start;
+    margin-bottom: var(--space-xxxl);
+}
+
+.hiw-steps-list-container {
+    position: relative;
+    padding: var(--space-xl);
+    background: var(--accent-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hiw-step-line {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-orange), var(--secondary-green));
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hiw-step-item {
+    display: flex;
+    gap: var(--space-xl);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.hiw-step-margin {
+    margin-bottom: var(--space-xxl);
+}
+
+.hiw-step-number-container {
+    position: relative;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hiw-step-circle {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 800;
+    transition: all var(--transition-base);
+    margin-bottom: var(--space-sm);
+}
+
+.hiw-step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 56px;
+    z-index: 2;
+}
+
+.hiw-step-content {
+    flex: 1;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    border: 1px solid transparent;
+}
+
+.hiw-step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.hiw-step-desc {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+.hiw-step-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.hiw-feature-tag {
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hiw-feature-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.hiw-active-indicator {
+    position: absolute;
+    left: 68px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+.hiw-active-dot-inner {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Visual Demo Styles */
+.hiw-visual-wrapper {
+    position: relative;
+    height: 600px;
+}
+
+.hiw-visual-container {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hiw-visual-bg-anim {
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(from 0deg at 50% 50%, #E3F2FD 0%, #FFF3E0 25%, #E8F5E8 50%, #FFF3E0 75%, #E3F2FD 100%);
+    opacity: 0.5;
+    animation: rotate 20s linear infinite;
+}
+
+.hiw-visual-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+}
+
+/* Step 0 Visuals */
+.hiw-step0-container {
+    text-align: center;
+}
+
+.hiw-step0-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+    animation: bounce 2s infinite;
+}
+
+.hiw-visual-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.hiw-visual-desc {
+    font-size: 1rem;
+    color: var(--text-medium);
+    max-width: 300px;
+}
+
+/* Step 1 Visuals */
+.hiw-step1-container {
+    text-align: center;
+    width: 100%;
+}
+
+.hiw-ai-viz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    position: relative;
+}
+
+.hiw-ai-core {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(27, 94, 32, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+.hiw-ai-icon {
+    font-size: 3rem;
+    animation: spin 4s linear infinite;
+}
+
+.hiw-orbit-node {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #1B5E20;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Step 2 Visuals */
+.hiw-step2-container {
+    text-align: center;
+    width: 100%;
+}
+
+.hiw-booking-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.hiw-card-simple {
+    padding: var(--space-lg);
+    background: var(--accent-white);
+    border-radius: var(--radius-lg);
+}
+
+.hiw-card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.hiw-card-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.hiw-card-desc {
+    font-size: 0.75rem;
+    color: var(--text-medium);
+}
+
+.hiw-match-alert {
+    padding: var(--space-lg);
+    background: #2196F3;
+    color: white;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+    animation: pulse 2s infinite;
+}
+
+/* Step 3 Visuals */
+.hiw-step3-container {
+    text-align: center;
+    width: 100%;
+}
+
+.hiw-tracking-map {
+    position: relative;
+    height: 200px;
+    margin-bottom: var(--space-xl);
+}
+
+.hiw-map-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #E8F5E9, #E1F5FE);
+    border-radius: var(--radius-lg);
+    opacity: 0.5;
+}
+
+.hiw-tracking-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+/* Step 4 Visuals */
+.hiw-step4-container {
+    text-align: center;
+    width: 100%;
+}
+
+.hiw-analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.hiw-analytics-card {
+    padding: var(--space-md);
+    background: var(--accent-white);
+    border-radius: var(--radius-md);
+}
+
+.hiw-analytics-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+}
+
+.hiw-reports {
+    background: linear-gradient(135deg, #FFF3E0, #FFECB3);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+/* CTA Section at bottom */
+.hiw-cta-section {
+    text-align: center;
+    margin-top: var(--space-xxxl);
+    padding-top: var(--space-xxl);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hiw-cta-desc {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hiw-cta-btn {
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+}
+
+/* Keyframes */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes moveTruck {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+
+    /* Adjusted based on visual container width estimate */
+}
